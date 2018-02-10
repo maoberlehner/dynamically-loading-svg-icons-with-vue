@@ -44,6 +44,14 @@ export default {
   stroke: none;
 }
 
+.AppIcon--s {
+  height: 0.5em;
+}
+
+.AppIcon--m {
+  height: 1em;
+}
+
 .AppIcon--l {
   height: 3em;
 }
