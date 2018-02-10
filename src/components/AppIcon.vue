@@ -1,0 +1,47 @@
+<template>
+  <svgicon
+    :class="{
+      [$options.name]: true,
+      [`${$options.name}--${size}`]: size,
+    }"
+    :name="name">
+  </svgicon>
+</template>
+
+<script>
+export default {
+  name: `AppIcon`,
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    size: {
+      type: String,
+    },
+  },
+  created() {
+    import(/* webpackChunkName: "AppIcon-[request]" */ `./icons/${this.name}`);
+  },
+};
+</script>
+
+<style>
+.AppIcon {
+  display: inline-block;
+  height: 1em;
+  color: inherit;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+}
+
+.AppIcon--fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.AppIcon--l {
+  height: 3em;
+}
+</style>
