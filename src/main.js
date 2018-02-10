@@ -5,6 +5,9 @@ import App from './App';
 
 Vue.config.productionTip = false;
 
+// We install `vue-svgicon` as plugin
+// and configure it to prefix all CSS
+// classes with `AppIcon-`.
 Vue.use(svgicon, {
   classPrefix: `AppIcon-`,
 });
